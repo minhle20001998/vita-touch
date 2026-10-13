@@ -1,0 +1,18 @@
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+if(NOT DEFINED ENV{VITASDK})
+    message(FATAL_ERROR "VITASDK environment variable is not set!")
+endif()
+
+set(VITASDK $ENV{VITASDK})
+set(CMAKE_C_COMPILER "${VITASDK}/bin/arm-vita-eabi-gcc")
+set(CMAKE_CXX_COMPILER "${VITASDK}/bin/arm-vita-eabi-g++")
+set(CMAKE_ASM_COMPILER "${VITASDK}/bin/arm-vita-eabi-gcc")
+
+set(CMAKE_FIND_ROOT_PATH "${VITASDK}/arm-vita-eabi")
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)

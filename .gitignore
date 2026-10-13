@@ -1,0 +1,25 @@
+build/
+*.elf
+*.vpk
+eboot.bin
+sce_sys/
+.vpk_count
+
+# host-test/ generated artifacts (host-test/run.sh)
+host-test/test_config
+host-test/test_gesture
+host-test/test_protocol
+host-test/.out_*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.vscode/
+.idea/
